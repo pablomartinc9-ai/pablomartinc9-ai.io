@@ -36,7 +36,6 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .nav-cv:hover { border-color: var(--text); }
 
 /* Layout & Cards */
-.section-title { font-family: var(--font-head); font-size: 1.4rem; margin: 40px 0 16px; color: var(--text); }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 26px; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
 .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 .row { margin-top: 16px; }
@@ -92,7 +91,7 @@ footer a:hover { color: var(--accent-soft); }
   <nav>
     <div class="logo">Pablo<span>.</span></div>
     <div class="nav-right">
-      <button class="lang-btn" id="langToggle" aria-label="Toggle language">EN</button>
+      <button class="lang-btn" id="langToggle" aria-label="Cambiar idioma">EN</button>
       <a href="#" class="nav-cv" data-i="nav.cv">Descargar CV</a>
       <a href="mailto:pablomartinc9@gmail.com" class="nav-cta" data-i="nav.cta">Hablemos</a>
     </div>
@@ -101,29 +100,204 @@ footer a:hover { color: var(--accent-soft); }
 
 <div class="wrap">
   <div class="top-row">
-    <div class="card photo-card"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAKAAoADASIAAhEBAxEB/8QAHQABAAEFAQEBAAAAAAAAAAAAAAMBAgQFBgcICf/EAEMQAAEEAQMCBQIDBwMDBAECBwEAAgMRBAUSITFBBhMiUWEHcRQygQgjQpGhscEVUtEkM+EWYnLx8CY0NkNTY4Kiwv/EABsBAQADAQEBAQAAAAAAAAAAAAABAgMEBQYH/8QALBEBAQACAgIBAwMEAgMBAAAAAAECEQMhBDESBRNBIjJRFCNhcQYzFYGRsf/aAAwDAQACEQMRAD8A+y0REBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBEQlARLHuFjzZuNCxzpJmMDRZJPRBkErEytRxcexLM0Edu65geKhqevzYenPLsPEA86Zv8AG8i9o/ytRm6zg5Oo/hMExvkdIxss7j6I3dSwHu77dFS5LTH+XoGDmMy2bmRyM+HiislaHRcq5nnznTN3bWuIAHHU191t5MuCOQRvfTj2pWlRU6KH8VBx+9b+iwc7X9JwTWXnQwD3eaH803DVbRFrsHW9Lzr/AAWdj5IHXynh1felmCeIgneKCbRpKijE0RFh4pXhzSLBBCkVRLCICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiArZJGRt3PcGj5Wu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 on Backorder or Not Listed Please contact us for more information. 
+    <div class="card photo-card">
+        <img src="Pablo_2.jpeg" alt="Fotografía de Pablo">
+    </div>
+    <div class="card bio-card">
+      <p data-i="bio.p">Soy Pablo, analista de datos en formación con base en <em>Power BI</em> y <em>Snowflake</em>, ampliando ahora hacia Python y machine learning. Vengo del análisis de negocio y busco mi primera incorporación en un equipo de datos.</p>
+    </div>
+  </div>
 
-Prices: Prices do change and we reserve the right to correct prices at anytime. You will be notified in such an event.
- 
+  <div class="card interests-card row">
+    <h3 data-i="interests.h">Intereses</h3>
+    <div class="sep"></div>
+    <span class="badge">🧠 <span data-i="interests.ml">Machine Learning</span></span>
+    <span class="badge">🤖 <span data-i="interests.ai">Inteligencia Artificial aplicada</span></span>
+    <span class="badge">📊 <span data-i="interests.dataviz">Visualización de datos</span></span>
+    <span class="badge">☁️ <span data-i="interests.cloud">Arquitecturas de datos en la nube</span></span>
+  </div>
 
-<strong>Shipping Information
+  <div class="row2">
+    <div class="card pcard">
+      <div class="pcard-head">
+        <div><h3>CAPEX EMEA</h3><div class="role" data-i="capex.role">Power BI &amp; Snowflake · Data Analyst Intern</div></div>
+        <span class="date-pill" data-i="capex.date">Feb – Jul 2026</span>
+      </div>
+      <hr>
+      <ul>
+        <li data-i="capex.b1">Construí el informe CAPEX EMEA desde cero sobre una capa gold de Snowflake, con drillthrough por jerarquía PEP (SAP WBS) multinivel.</li>
+        <li data-i="capex.b2">Implementé parámetros de campo para cambio dinámico de idioma (ES/EN) y escenario (Real/Presupuesto).</li>
+        <li data-i="capex.b3">Resolví una relación ambigua mediante tablas derivadas filtradas por nivel jerárquico, evitando problemas de cardinalidad.</li>
+        <li data-i="capex.b4">Publiqué también el P&amp;L hotelero, un informe de cancelaciones end-to-end y reporting de NPS sobre Snowflake.</li>
+      </ul>
+    </div>
 
-</strong> Orders are normally filled and shipped within 1-5 business days upon receiving your order with approved credit card purchase.  All Shipments originate in California by regular FED EX, UPS ground or truck. For shipping quotes on items that weigh over 150 lbs please email or call us toll free at 800-474-7294. Sorry at this time we do not ship out side of North America. 
+    <div class="card pcard">
+      <div class="pcard-head">
+        <div><h3 data-i="tfm.title">TFM — Precio del AOVE</h3><div class="role" data-i="tfm.role">Trabajo Fin de Máster · Autor</div></div>
+        <span class="date-pill" data-i="tfm.date">Entrega mayo 2026</span>
+      </div>
+      <hr>
+      <ul>
+        <li data-i="tfm.b1">Diseñé una arquitectura medallion (Bronze/Silver/Gold) sobre DuckDB, integrando POOLred, MAPA, COI, FAOSTAT, AEMET y Copernicus.</li>
+        <li data-i="tfm.b2">Modelé el precio en origen del aceite de oliva virgen extra con Prophet y XGBoost, evaluando con MAE.</li>
+        <li data-i="tfm.b3">Acoté el alcance a la predicción de precio, dejando fuera consumo, mercados internacionales y recepción.</li>
+        <li data-i="tfm.b4">Visualización final del modelo en Power BI, pensada para el uso de la cooperativa.</li>
+      </ul>
+    </div>
 
-We try to process and ship out items as quickly as we can, in the unfortunate event you try to cancel a order that is already in transit from our location or manufacturers location you will be responsible for round trip freight charges. If the item or items you have ordered can not be shipped we will try and contact you to arrange other means of transportation. Items over 150 lbs will be shipped by truck. You must notify us if you wish to have inside delivery or lift gate service as this will be an additional cost to shipping quote given on check out. For questions call 800-474-7294 or Email. 
+    <div class="card pcard">
+      <div class="pcard-head">
+        <div><h3 data-i="ml.title">Data Mining &amp; Machine Learning</h3><div class="role" data-i="ml.role">Máster ESIC · Proyecto de curso</div></div>
+        <span class="date-pill" data-i="ml.date">Desde sept. 2026</span>
+      </div>
+      <hr>
+      <ul>
+        <li data-i="ml.b1">Proyecto real desarrollado como hilo conductor de las asignaturas de Data Mining y Machine Learning.</li>
+        <li data-i="ml.b2">Python 3.11 como stack principal, con control de versiones en Git desde el primer día de clase.</li>
+      </ul>
+    </div>
 
-Most items will be shipped directly from our suppliers to you to save on shipping cost. In this event wait times may exceed the normal  1-5 business day wait.
+    <div class="card pcard">
+      <div class="pcard-head">
+        <div><h3 data-i="strava.title">Análisis de entrenamiento</h3><div class="role" data-i="strava.role">Strava · Proyecto personal</div></div>
+        <span class="date-pill" data-i="strava.date">Jul 2026</span>
+      </div>
+      <hr>
+      <ul>
+        <li data-i="strava.b1">Analicé ritmo y frecuencia cardíaca de mi propio entrenamiento de running con datos de Strava.</li>
+        <li data-i="strava.b2">Apliqué el análisis a la preparación de la XI Carrera El Grupo (12,7 km, Granada, ~260 m de desnivel).</li>
+        <li data-i="strava.b3">Diseñé una estrategia de pacing y un test progresivo de FC máxima para calibrar zonas de entrenamiento.</li>
+      </ul>
+    </div>
+  </div>
 
-<b>If you receive a defective or damaged product</b> please be sure to report it within 3-4 days of delivery. For damaged items please keep all packaging the product arrived in so that a damage claim can be filed with the freight carrier. (Please see Policies for further info on returns)
+  <div class="row2">
+    <div class="card tool-card">
+      <h3 data-i="tools.bi">Stack BI</h3>
+      <div class="tool-list">
+        <span class="tool"><i style="background:#F2C811">PBI</i>Power BI</span>
+        <span class="tool"><i style="background:#F2C811">DAX</i>DAX</span>
+        <span class="tool"><i style="background:#29B5E8">SF</i>Snowflake</span>
+        <span class="tool"><i style="background:#8FA0FF">PQ</i>Power Query</span>
+        <span class="tool"><i style="background:#8FA0FF">TE</i>Tabular Editor</span>
+        <span class="tool"><i style="background:#F05033">Git</i>Git</span>
+      </div>
+    </div>
+    <div class="card tool-card">
+      <h3 data-i="tools.ml">Stack analítico &amp; ML</h3>
+      <div class="tool-list">
+        <span class="tool"><i style="background:#4B8BBE">Py</i>Python</span>
+        <span class="tool"><i style="background:#150458">pd</i>Pandas</span>
+        <span class="tool"><i style="background:#0072B5">Fb</i>Prophet</span>
+        <span class="tool"><i style="background:#EC6602">XGB</i>XGBoost</span>
+        <span class="tool"><i style="background:#FFF000">DB</i>DuckDB</span>
+        <span class="tool"><i style="background:#8FA0FF">dbt</i>dbt</span>
+      </div>
+    </div>
+  </div>
 
-<strong>Refusal of Shipment</strong> If you refuse shipment of your product you will be responsible for a minimum 15% restock fee as well as the freight cost of round trip shipment of product.
+  <div class="row2">
+    <div class="card inline-card">
+      <h3 data-i="lang.h">Idiomas</h3>
+      <div class="sep"></div>
+      <span class="lang-badge">🇪🇸 <span data-i="lang.es">Español — nativo</span></span>
+      <span class="lang-badge">🇬🇧 <span data-i="lang.en">Inglés — B2, certificación oficial</span></span>
+    </div>
+    <div class="card inline-card">
+      <h3 data-i="profiles.h">Perfiles</h3>
+      <div class="sep"></div>
+      <a href="https://www.linkedin.com/in/pablo-mart%C3%ADn-candenas-17ba18229/" class="link-badge" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.strava.com/athletes/32864621" class="link-badge" target="_blank" rel="noopener">Strava</a>
+    </div>
+  </div>
 
-<strong>If you are Tax Exempt</strong> and wish to place an order you may place your order online. Once your order has been placed online please E-mail a copy of your exemption certificate to Sales@Raynertool.com or fax to 408-297-5120. Please reference your order number when sending copy of tax exemption certificate. 
+  <div class="card inline-card row">
+    <h3 data-i="details.h">Datos de contacto</h3>
+    <div class="sep"></div>
+    <span class="detail-badge">✉️ pablomartinc9@gmail.com</span>
+    <span class="detail-badge">🇪🇸 <span data-i="details.location">Granada, España</span></span>
+    <span class="detail-badge" data-i="details.availability">Movilidad total</span>
+  </div>
 
-Orders are shipped subject to Rayner Equipment availability. If for some reason product can not be shipped within 15 days of order you will be notified and given the option to cancel. You can view your order status at anytime after your purchase.
+</div>
 
-Please be sure all of your information is entered correctly as this may cause delays in shipping of your product.
+<footer>
+  <p><span data-i="footer.text">Busco mi primera incorporación como analista de datos / BI</span> · <a href="mailto:pablomartinc9@gmail.com">pablomartinc9@gmail.com</a></p>
+</footer>
 
-<strong>Warranty
-
-</strong> Products are warranted to the extent of the manufacturer's express warranty to us, which we will pass through to our customers. A copy of each warranty is available upon request. We will not be liable for incidental, special, consequential damages, lost profits and /or punitive damages.
+<script>
+const dict = {
+  es: {
+    "nav.cv": "Descargar CV",
+    "nav.cta": "Hablemos",
+    "bio.p": "Soy Pablo, analista de datos en formación con base en <em>Power BI</em> y <em>Snowflake</em>, ampliando ahora hacia Python y machine learning. Vengo del análisis de negocio y busco mi primera incorporación en un equipo de datos.",
+    "interests.h": "Intereses", "interests.ml": "Machine Learning", "interests.ai": "Inteligencia Artificial aplicada", "interests.dataviz": "Visualización de datos", "interests.cloud": "Arquitecturas de datos en la nube",
+    "capex.role": "Power BI & Snowflake · Data Analyst Intern", "capex.date": "Feb – Jul 2026",
+    "capex.b1": "Construí el informe CAPEX EMEA desde cero sobre una capa gold de Snowflake, con drillthrough por jerarquía PEP (SAP WBS) multinivel.",
+    "capex.b2": "Implementé parámetros de campo para cambio dinámico de idioma (ES/EN) y escenario (Real/Presupuesto).",
+    "capex.b3": "Resolví una relación ambigua mediante tablas derivadas filtradas por nivel jerárquico, evitando problemas de cardinalidad.",
+    "capex.b4": "Publiqué también el P&L hotelero, un informe de cancelaciones end-to-end y reporting de NPS sobre Snowflake.",
+    "tfm.title": "TFM — Precio del AOVE", "tfm.role": "Trabajo Fin de Máster · Autor", "tfm.date": "Entrega mayo 2026",
+    "tfm.b1": "Diseñé una arquitectura medallion (Bronze/Silver/Gold) sobre DuckDB, integrando POOLred, MAPA, COI, FAOSTAT, AEMET y Copernicus.",
+    "tfm.b2": "Modelé el precio en origen del aceite de oliva virgen extra con Prophet y XGBoost, evaluando con MAE.",
+    "tfm.b3": "Acoté el alcance a la predicción de precio, dejando fuera consumo, mercados internacionales y recepción.",
+    "tfm.b4": "Visualización final del modelo en Power BI, pensada para el uso de la cooperativa.",
+    "ml.title": "Data Mining & Machine Learning", "ml.role": "Máster ESIC · Proyecto de curso", "ml.date": "Desde sept. 2026",
+    "ml.b1": "Proyecto real desarrollado como hilo conductor de las asignaturas de Data Mining y Machine Learning.",
+    "ml.b2": "Python 3.11 como stack principal, con control de versiones en Git desde el primer día de clase.",
+    "strava.title": "Análisis de entrenamiento", "strava.role": "Strava · Proyecto personal", "strava.date": "Jul 2026",
+    "strava.b1": "Analicé ritmo y frecuencia cardíaca de mi propio entrenamiento de running con datos de Strava.",
+    "strava.b2": "Apliqué el análisis a la preparación de la XI Carrera El Grupo (12,7 km, Granada, ~260 m de desnivel).",
+    "strava.b3": "Diseñé una estrategia de pacing y un test progresivo de FC máxima para calibrar zonas de entrenamiento.",
+    "tools.bi": "Stack BI", "tools.ml": "Stack analítico & ML",
+    "lang.h": "Idiomas", "lang.es": "Español — nativo", "lang.en": "Inglés — B2, certificación oficial",
+    "profiles.h": "Perfiles", "details.h": "Datos de contacto", "details.location": "Granada, España", "details.availability": "Movilidad total",
+    "footer.text": "Busco mi primera incorporación como analista de datos / BI"
+  },
+  en: {
+    "nav.cv": "Download CV",
+    "nav.cta": "Get in touch",
+    "bio.p": "I'm Pablo, a data analyst in training based on <em>Power BI</em> and <em>Snowflake</em>, now expanding into Python and machine learning. I come from business analysis and I'm looking for my first role on a data team.",
+    "interests.h": "Interests", "interests.ml": "Machine Learning", "interests.ai": "Applied AI", "interests.dataviz": "Data visualisation", "interests.cloud": "Cloud data architectures",
+    "capex.role": "Power BI & Snowflake · Data Analyst Intern", "capex.date": "Feb – Jul 2026",
+    "capex.b1": "Built the CAPEX EMEA report from scratch on a Snowflake gold layer, with drillthrough across a multi-level PEP (SAP WBS) hierarchy.",
+    "capex.b2": "Implemented field parameters for dynamic language (ES/EN) and scenario switching (Actual/Budget).",
+    "capex.b3": "Resolved an ambiguous relationship using derived tables filtered by hierarchy level, avoiding cardinality issues.",
+    "capex.b4": "Also released the hotel P&L, an end-to-end cancellations report, and NPS reporting on Snowflake.",
+    "tfm.title": "Master's thesis — AOVE pricing", "tfm.role": "Master's thesis (TFM) · Author", "tfm.date": "Due May 2026",
+    "tfm.b1": "Designed a medallion architecture (Bronze/Silver/Gold) on DuckDB, integrating POOLred, MAPA, COI, FAOSTAT, AEMET and Copernicus.",
+    "tfm.b2": "Modelled the origin price of extra virgin olive oil with Prophet and XGBoost, evaluated with MAE.",
+    "tfm.b3": "Scoped the thesis to price prediction only, leaving out consumption, international markets and reception.",
+    "tfm.b4": "Final model visualisation in Power BI, built for the cooperative's own use.",
+    "ml.title": "Data Mining & Machine Learning", "ml.role": "ESIC Master's · Course project", "ml.date": "Since Sep 2026",
+    "ml.b1": "Real-world project run as the throughline of the Data Mining and Machine Learning courses.",
+    "ml.b2": "Python 3.11 as the core stack, with Git version control from day one.",
+    "strava.title": "Training analysis", "strava.role": "Strava · Personal project", "strava.date": "Jul 2026",
+    "strava.b1": "Analysed pace and heart rate from my own running training using Strava data.",
+    "strava.b2": "Applied the analysis to prepare for the XI Carrera El Grupo (12.7 km, Granada, ~260 m elevation).",
+    "strava.b3": "Designed a pacing strategy and a progressive max-HR test to calibrate training zones.",
+    "tools.bi": "BI stack", "tools.ml": "Analytics & ML stack",
+    "lang.h": "Languages", "lang.es": "Spanish — native", "lang.en": "English — B2, official certification",
+    "profiles.h": "Profiles", "details.h": "Contact details", "details.location": "Granada, Spain", "details.availability": "Fully mobile",
+    "footer.text": "Looking for my first role as a data / BI analyst"
+  }
+};
+let lang = 'es';
+const btn = document.getElementById('langToggle');
+function applyLang(l) {
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-i]').forEach(el => {
+    const key = el.getAttribute('data-i');
+    if (dict[l][key] !== undefined) el.innerHTML = dict[l][key];
+  });
+  btn.textContent = l === 'es' ? 'EN' : 'ES';
+}
+btn.addEventListener('click', () => {
+  lang = lang === 'es' ? 'en' : 'es';
+  applyLang(lang);
+});
+applyLang(lang);
+</script>
+</body>
+</html>
