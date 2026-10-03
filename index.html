@@ -109,7 +109,7 @@ nav { display: flex; align-items: center; justify-content: space-between; backgr
 .project-card { display: block; width: 100%; transform-origin: top center; will-change: transform, opacity; }
 .project-card { border-radius: 24px; overflow: hidden; background: var(--surface); padding: 24px; box-shadow: 0 4px 24px rgba(0,0,0,0.25); border: 1px solid var(--border); transition: transform 0.3s ease, border-color .3s ease; }
 .project-card:hover { transform: translateY(-10px); border-color: var(--accent-soft); }
-.project-visual { background: var(--surface-3); height: 240px; border-radius: 16px; margin-bottom: 24px; overflow: hidden; }
+.project-visual { background: var(--surface-3); aspect-ratio: 5 / 3; border-radius: 16px; margin-bottom: 24px; overflow: hidden; }
 .project-visual svg { width: 100%; height: 100%; display: block; }
 .project-info { display: flex; justify-content: space-between; align-items: flex-end; }
 .project-cat { color: var(--accent-soft); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; }
@@ -143,7 +143,7 @@ footer { border-top: 1px solid var(--border); color: var(--text-muted); padding:
 .modal-overlay.open .modal-box { transform: translateY(0) scale(1); }
 .modal-close { position: absolute; top: 18px; right: 18px; width: 36px; height: 36px; border-radius: 50%; background: var(--surface-3); border: 1px solid var(--border); color: var(--text-main); font-size: 1.3rem; line-height: 1; display: flex; align-items: center; justify-content: center; z-index: 2; }
 .modal-close:hover { border-color: var(--accent-soft); color: var(--accent-soft); }
-.modal-visual { border-radius: 20px; overflow: hidden; background: var(--surface-3); margin-bottom: 24px; height: 220px; border: 1px solid var(--border); }
+.modal-visual { border-radius: 20px; overflow: hidden; background: var(--surface-3); margin-bottom: 24px; aspect-ratio: 5 / 3; border: 1px solid var(--border); }
 .modal-visual svg, .modal-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .modal-cat { color: var(--accent-soft); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 8px; }
 .modal-title { font-family: var(--font-head); font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 800; margin-bottom: 22px; }
@@ -269,52 +269,26 @@ body.modal-locked { overflow: hidden; }
         <div class="stack-item">
           <a href="#" class="project-card fade-in" data-project="capex">
             <div class="project-visual">
-              <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">
-                <rect x="24" y="24" width="352" height="192" rx="10" fill="none" stroke="#2B3038" stroke-width="1.5"/>
-                <circle cx="42" cy="42" r="3.5" fill="#4A515A"/><circle cx="54" cy="42" r="3.5" fill="#4A515A"/><circle cx="66" cy="42" r="3.5" fill="#4A515A"/>
-                <text x="84" y="45" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#6C7580">CAPEX EMEA</text>
-                <rect x="298" y="34" width="62" height="16" rx="8" fill="none" stroke="#8FA0AC" stroke-width="1.2"/>
-                <text x="329" y="45.5" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#8FA0AC" text-anchor="middle">ACT/BUD</text>
-                <line x1="24" y1="58" x2="376" y2="58" stroke="#2B3038" stroke-width="1"/>
-
-                <rect x="40" y="68" width="100" height="38" rx="8" fill="#1B1F25" stroke="#262B32" stroke-width="1"/>
-                <text x="50" y="82" font-family="Inter, sans-serif" font-size="7" fill="#6C7580">CAPEX YTD</text>
-                <text x="50" y="98" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#F1F1EF">4,2M €</text>
-                <text x="130" y="98" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#7C9A7C" text-anchor="end">+8%</text>
-
-                <rect x="150" y="68" width="100" height="38" rx="8" fill="#1B1F25" stroke="#262B32" stroke-width="1"/>
-                <text x="160" y="82" font-family="Inter, sans-serif" font-size="7" fill="#6C7580">DESVIACIÓN</text>
-                <text x="160" y="98" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#F1F1EF">-6%</text>
-                <text x="240" y="98" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#CF5A4E" text-anchor="end">▼</text>
-
-                <rect x="260" y="68" width="100" height="38" rx="8" fill="#1B1F25" stroke="#262B32" stroke-width="1"/>
-                <text x="270" y="82" font-family="Inter, sans-serif" font-size="7" fill="#6C7580">HOTELES</text>
-                <text x="270" y="98" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#F1F1EF">287</text>
-
-                <text x="42" y="124" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#BAC5CC">NORTE</text>
-                <rect x="42" y="129" width="7" height="7" rx="2" fill="#E0A23D"/>
-                <rect x="55" y="130" width="130" height="5" rx="2.5" fill="#262B32"/>
-                <rect x="55" y="130" width="92" height="5" rx="2.5" fill="#8FA0AC"/>
-                <text x="340" y="135" font-family="Inter, sans-serif" font-size="7.5" fill="#9BA3AA" text-anchor="end">92%</text>
-
-                <rect x="42" y="143" width="7" height="7" rx="2" fill="#CF5A4E"/>
-                <rect x="55" y="144" width="130" height="5" rx="2.5" fill="#262B32"/>
-                <rect x="55" y="144" width="118" height="5" rx="2.5" fill="#8FA0AC"/>
-                <text x="340" y="149" font-family="Inter, sans-serif" font-size="7.5" fill="#9BA3AA" text-anchor="end">108%</text>
-
-                <text x="42" y="166" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#BAC5CC">CATALUÑA</text>
-                <rect x="42" y="171" width="7" height="7" rx="2" fill="#E0A23D"/>
-                <rect x="55" y="172" width="130" height="5" rx="2.5" fill="#262B32"/>
-                <rect x="55" y="172" width="98" height="5" rx="2.5" fill="#8FA0AC"/>
-                <text x="340" y="177" font-family="Inter, sans-serif" font-size="7.5" fill="#9BA3AA" text-anchor="end">96%</text>
-
-                <rect x="42" y="185" width="7" height="7" rx="2" fill="#7C9A7C"/>
-                <rect x="55" y="186" width="130" height="5" rx="2.5" fill="#262B32"/>
-                <rect x="55" y="186" width="70" height="5" rx="2.5" fill="#8FA0AC"/>
-                <text x="340" y="191" font-family="Inter, sans-serif" font-size="7.5" fill="#9BA3AA" text-anchor="end">74%</text>
-
-                <line x1="222" y1="118" x2="222" y2="196" stroke="#20242B" stroke-width="1"/>
-                <line x1="282" y1="118" x2="282" y2="196" stroke="#20242B" stroke-width="1"/>
+              <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                  <radialGradient id="capexBg" cx="28%" cy="24%" r="85%">
+                    <stop offset="0%" stop-color="#1B1F25"/>
+                    <stop offset="100%" stop-color="#101216"/>
+                  </radialGradient>
+                  <linearGradient id="capexShape" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#BAC5CC"/>
+                    <stop offset="100%" stop-color="#4A515A"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="240" fill="url(#capexBg)"/>
+                <rect x="58" y="152" width="190" height="62" rx="16" fill="#1B1F25" stroke="#262B32" stroke-width="1.5"/>
+                <rect x="104" y="110" width="190" height="62" rx="16" fill="#20242B" stroke="#2B3038" stroke-width="1.5"/>
+                <rect x="150" y="68" width="190" height="62" rx="16" fill="url(#capexShape)" opacity="0.92"/>
+                <circle cx="168" cy="99" r="4" fill="#15181D"/>
+                <circle cx="188" cy="99" r="4" fill="#15181D" opacity="0.6"/>
+                <circle cx="208" cy="99" r="4" fill="#15181D" opacity="0.6"/>
+                <line x1="150" y1="130" x2="150" y2="152" stroke="#8FA0AC" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.7"/>
+                <line x1="248" y1="172" x2="248" y2="192" stroke="#8FA0AC" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.5"/>
               </svg>
             </div>
             <div class="project-info">
@@ -337,32 +311,28 @@ body.modal-locked { overflow: hidden; }
         <div class="stack-item">
           <a href="#" class="project-card fade-in" data-project="tfm">
             <div class="project-visual">
-              <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">
-                <rect x="24" y="24" width="352" height="192" rx="10" fill="none" stroke="#2B3038" stroke-width="1.5"/>
-                <circle cx="42" cy="42" r="3.5" fill="#4A515A"/><circle cx="54" cy="42" r="3.5" fill="#4A515A"/><circle cx="66" cy="42" r="3.5" fill="#4A515A"/>
-                <text x="84" y="45" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#6C7580">PREDICCIÓN PRECIO AOVE</text>
-                <rect x="312" y="34" width="48" height="16" rx="8" fill="none" stroke="#8FA0AC" stroke-width="1.2"/>
-                <text x="336" y="45.5" font-family="Inter, sans-serif" font-size="7.5" font-weight="700" fill="#8FA0AC" text-anchor="middle">MAE 0.18</text>
-                <line x1="24" y1="58" x2="376" y2="58" stroke="#2B3038" stroke-width="1"/>
-
-                <line x1="44" y1="76" x2="360" y2="76" stroke="#20242B" stroke-width="1"/>
-                <line x1="44" y1="112" x2="360" y2="112" stroke="#20242B" stroke-width="1"/>
-                <line x1="44" y1="148" x2="360" y2="148" stroke="#20242B" stroke-width="1"/>
-                <line x1="44" y1="184" x2="360" y2="184" stroke="#20242B" stroke-width="1"/>
-
-                <path d="M230 140 C 260 110, 290 150, 320 100 L 320 130 C 290 180, 260 140, 230 170 Z" fill="#8FA0AC" opacity="0.12"/>
-                <path d="M44 160 C 80 130, 110 175, 150 140 S 200 110, 230 140" fill="none" stroke="#BAC5CC" stroke-width="2" stroke-linecap="round"/>
-                <path d="M230 140 C 260 125, 290 150, 320 115" fill="none" stroke="#E0A23D" stroke-width="2" stroke-dasharray="5 4" stroke-linecap="round"/>
-
-                <text x="44" y="198" font-family="Inter, sans-serif" font-size="7" fill="#5C636B">Ene</text>
-                <text x="140" y="198" font-family="Inter, sans-serif" font-size="7" fill="#5C636B">May</text>
-                <text x="228" y="198" font-family="Inter, sans-serif" font-size="7" fill="#5C636B" text-anchor="middle">Sep</text>
-                <text x="356" y="198" font-family="Inter, sans-serif" font-size="7" fill="#5C636B" text-anchor="end">Ene</text>
-
-                <rect x="44" y="206" width="10" height="3" fill="#BAC5CC"/>
-                <text x="58" y="210" font-family="Inter, sans-serif" font-size="7.5" fill="#9BA3AA">Histórico</text>
-                <rect x="120" y="206" width="10" height="3" fill="#E0A23D"/>
-                <text x="134" y="210" font-family="Inter, sans-serif" font-size="7.5" fill="#9BA3AA">Predicción</text>
+              <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                  <radialGradient id="aoveBg" cx="30%" cy="28%" r="85%">
+                    <stop offset="0%" stop-color="#1B1F25"/>
+                    <stop offset="100%" stop-color="#101216"/>
+                  </radialGradient>
+                  <linearGradient id="aoveWave" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#4A515A"/>
+                    <stop offset="100%" stop-color="#BAC5CC"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="240" fill="url(#aoveBg)"/>
+                <path d="M20 170 C 90 120, 150 200, 220 140 S 340 80, 390 95" fill="none" stroke="url(#aoveWave)" stroke-width="3" stroke-linecap="round"/>
+                <path d="M20 170 C 90 120, 150 200, 220 140 S 340 80, 390 95 L 390 230 L 20 230 Z" fill="#8FA0AC" opacity="0.08"/>
+                <g stroke="#8FA0AC" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.85">
+                  <path d="M300 55 C 310 35, 330 30, 346 42"/>
+                </g>
+                <g fill="#BAC5CC" opacity="0.9">
+                  <ellipse cx="308" cy="48" rx="7" ry="10" transform="rotate(-20 308 48)"/>
+                  <ellipse cx="325" cy="39" rx="7" ry="10" transform="rotate(-8 325 39)"/>
+                  <ellipse cx="343" cy="44" rx="6" ry="9" transform="rotate(12 343 44)"/>
+                </g>
               </svg>
             </div>
             <div class="project-info">
@@ -385,42 +355,23 @@ body.modal-locked { overflow: hidden; }
         <div class="stack-item">
           <a href="#" class="project-card fade-in" data-project="strava">
             <div class="project-visual">
-              <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">
-                <rect x="24" y="24" width="352" height="192" rx="10" fill="none" stroke="#2B3038" stroke-width="1.5"/>
-                <circle cx="42" cy="42" r="3.5" fill="#4A515A"/><circle cx="54" cy="42" r="3.5" fill="#4A515A"/><circle cx="66" cy="42" r="3.5" fill="#4A515A"/>
-                <text x="84" y="45" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#6C7580">ANÁLISIS DE ENTRENAMIENTO</text>
-                <line x1="24" y1="58" x2="376" y2="58" stroke="#2B3038" stroke-width="1"/>
-
-                <line x1="44" y1="74" x2="360" y2="74" stroke="#20242B" stroke-width="1"/>
-                <line x1="44" y1="102" x2="360" y2="102" stroke="#20242B" stroke-width="1"/>
-                <line x1="44" y1="130" x2="360" y2="130" stroke="#20242B" stroke-width="1"/>
-
-                <path d="M44 120 L80 118 L112 128 L144 100 L176 110 L208 95 L240 108 L272 90 L304 100 L336 85 L360 92" fill="none" stroke="#8FA0AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M44 140 L80 135 L112 142 L144 120 L176 132 L208 115 L240 128 L272 112 L304 122 L336 108 L360 116" fill="none" stroke="#E0A23D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
-
-                <text x="44" y="150" font-family="Inter, sans-serif" font-size="7" fill="#5C636B">0 km</text>
-                <text x="356" y="150" font-family="Inter, sans-serif" font-size="7" fill="#5C636B" text-anchor="end">12,7 km</text>
-
-                <rect x="44" y="162" width="64" height="34" rx="8" fill="#1B1F25" stroke="#262B32" stroke-width="1"/>
-                <text x="76" y="175" font-family="Inter, sans-serif" font-size="7" fill="#6C7580" text-anchor="middle">DIST</text>
-                <text x="76" y="189" font-family="Inter, sans-serif" font-size="9.5" font-weight="700" fill="#F1F1EF" text-anchor="middle">12,7 km</text>
-
-                <rect x="116" y="162" width="64" height="34" rx="8" fill="#1B1F25" stroke="#262B32" stroke-width="1"/>
-                <text x="148" y="175" font-family="Inter, sans-serif" font-size="7" fill="#6C7580" text-anchor="middle">RITMO</text>
-                <text x="148" y="189" font-family="Inter, sans-serif" font-size="9.5" font-weight="700" fill="#F1F1EF" text-anchor="middle">4:52/km</text>
-
-                <rect x="188" y="162" width="64" height="34" rx="8" fill="#1B1F25" stroke="#262B32" stroke-width="1"/>
-                <text x="220" y="175" font-family="Inter, sans-serif" font-size="7" fill="#6C7580" text-anchor="middle">FC MEDIA</text>
-                <text x="220" y="189" font-family="Inter, sans-serif" font-size="9.5" font-weight="700" fill="#F1F1EF" text-anchor="middle">162 ppm</text>
-
-                <rect x="260" y="162" width="64" height="34" rx="8" fill="#1B1F25" stroke="#262B32" stroke-width="1"/>
-                <text x="292" y="175" font-family="Inter, sans-serif" font-size="7" fill="#6C7580" text-anchor="middle">DESNIVEL</text>
-                <text x="292" y="189" font-family="Inter, sans-serif" font-size="9.5" font-weight="700" fill="#F1F1EF" text-anchor="middle">+260 m</text>
-
-                <rect x="44" y="206" width="10" height="3" fill="#8FA0AC"/>
-                <text x="58" y="210" font-family="Inter, sans-serif" font-size="7.5" fill="#9BA3AA">Ritmo</text>
-                <rect x="108" y="206" width="10" height="3" fill="#E0A23D"/>
-                <text x="122" y="210" font-family="Inter, sans-serif" font-size="7.5" fill="#9BA3AA">FC</text>
+              <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                  <radialGradient id="stravaBg" cx="30%" cy="28%" r="85%">
+                    <stop offset="0%" stop-color="#1B1F25"/>
+                    <stop offset="100%" stop-color="#101216"/>
+                  </radialGradient>
+                  <linearGradient id="stravaRoute" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#BAC5CC"/>
+                    <stop offset="100%" stop-color="#4A515A"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="240" fill="url(#stravaBg)"/>
+                <path d="M40 70 C 90 50, 110 110, 160 100 S 230 50, 270 110 S 340 190, 370 160" fill="none" stroke="url(#stravaRoute)" stroke-width="3.5" stroke-linecap="round"/>
+                <circle cx="40" cy="70" r="6" fill="#8FA0AC"/>
+                <circle cx="370" cy="160" r="6" fill="none" stroke="#8FA0AC" stroke-width="2"/>
+                <circle cx="370" cy="160" r="15" fill="none" stroke="#8FA0AC" stroke-width="1" opacity="0.4"/>
+                <circle cx="370" cy="160" r="24" fill="none" stroke="#8FA0AC" stroke-width="1" opacity="0.2"/>
               </svg>
             </div>
             <div class="project-info">
